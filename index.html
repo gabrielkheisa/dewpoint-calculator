@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js" integrity="sha256-/H4YS+7aYb9kJ5OKhFYPUjSJdrtV6AeyJOtTkw6X72o=" crossorigin="anonymous"></script>
+
+
+<title>Dew Point Calculator</title>
+
+<style>
+.center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+body {
+  transition: 0.5s;
+}
+
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 99%;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #F33;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+
+
+
+@media only screen and (max-width: 1100px){
+body {
+  font-size:4em;
+}
+h2 {
+  font-size:1.5em;
+  text-align: center;
+}
+h4 {
+  font-size:0.8em;
+}
+h5 {
+  font-size:0.8em;
+}
+input {
+  font-size:1em !important;
+}
+select {
+  font-size:0.8em !important;
+}
+ .center {
+  margin: 5px;
+  width: 100%;
+  padding: 10px;
+}
+#tombol{
+  font-size:1em !important;
+}
+.progress {
+	height:50px !important;
+}
+.slider::-webkit-slider-thumb {
+  width: 75px;
+  height: 75px;
+}
+.slider {
+  height: 50px;
+}
+}
+.hum::-webkit-slider-thumb {
+  background: #33F;
+}
+</style>
+<body>
+
+<h2 class="d-flex justify-content-center mt-5">Dew Point Calculator</h2>
+
+
+
+<div id="the_wrapper" class="center" style="max-width:1200px;">
+
+<br>
+
+
+
+
+
+<div class="slidecontainer">
+<h5 class="d-flex m-3">Temperature (&#8451;)</h5>
+<h4 id="temp_tag" class="d-flex m-3">0</h4>
+  <input type="range" min="1" max="100" value="50" class="slider" id="temp_range" oninput="get_temp()">
+<h5 class="d-flex m-3">Humidity (%)</h5>
+<h4 id="hum_tag" class="d-flex m-3">0</h4>
+  <input type="range" min="1" max="100" value="50" class="slider hum" id="hum_range" oninput="get_hum()">
+</div>
+
+<br><br>
+
+<h5 class="d-flex m-3">Dew Point (&#8451;)</h5>
+<h4 id="dp_tag" class="d-flex m-3">Dew Point (&#8451;)</h4>
+<div class="progress mr-1" style="height:20px;">
+  <div id="bar-temp" class="progress-bar" style="width:50%; height:50px;"></div>
+</div>
+<h4 id="explain_tag" class="d-flex m-3">Dry</h4>
+
+</div>
+
+<script src="script.js">
+</script>
+
+</body>
+</html>
