@@ -8,4 +8,4 @@
 <br>
 <p>Dew point and humidity also explain why people tend not to sweat in deserts because desert climates have low humidity despite high temperatures, whereas tropical rainforests have lower temperatures but feel more sticky.</p>
 
-<img src="https://www.mrfixitbali.com/images/articleimages/dew-point-chart-compact.jpg">
+<img src="https://cdn.discordapp.com/attachments/1003173519879847966/1026559659064168510/unknown.png">
